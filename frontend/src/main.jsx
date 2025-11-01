@@ -3,12 +3,7 @@ import ReactDOM from 'react-dom/client';
 import Greeting from './Greeting.jsx';
 
 function App() {
-  return (
-    <div>
-      <Greeting name="Cypress Tester" />
-      <button onClick={() => alert('Button clicked!')}>Click me</button>
-    </div>
-  );
+  return <Greeting name="Cypress Tester" />;
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />);
