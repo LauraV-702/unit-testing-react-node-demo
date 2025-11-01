@@ -9,16 +9,24 @@ function Greeting({ name = 'Guest' }) {
     `Hola ${name}! 404 problems but a bug ain't one 🚀`
   ];
 
+  // State to track which quote is showing
   const [index, setIndex] = useState(0);
 
+  // Show next quote
   const nextQuote = () => setIndex((index + 1) % quotes.length);
+
+  // Reset to first quote
   const resetQuote = () => setIndex(0);
 
   return (
     <div style={styles.container}>
+      {/* Page title */}
       <h1 style={styles.title}>🤖 Greeting Machine</h1>
+
+      {/* Display current quote */}
       <p style={styles.quote}>{quotes[index]}</p>
 
+      {/* Buttons for next and reset */}
       <div style={styles.buttons}>
         <button onClick={nextQuote} style={styles.btnPrimary}>
           Next Quote →
